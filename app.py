@@ -451,7 +451,7 @@ import streamlit as st
 nlp = spacy.load("en_core_web_sm")
 
 # Load the dataset from the CSV file
-csv_file_path = r"D:\rudhir\toursoft JAPAN INTERN\gitt_repo\code\synthetic_hotels_dataset_japan.csv"  # Use the correct path
+csv_file_path = r"https://raw.githubusercontent.com/itsrudhir/llm_testing/main/synthetic_hotels_dataset_japan.csv"  # Use the correct path
 df = pd.read_csv(csv_file_path)
 
 # NLP extraction function
