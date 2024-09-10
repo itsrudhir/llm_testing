@@ -55,6 +55,7 @@ googlemaps==4.10.0
 grpcio==1.66.1
 h5py==3.11.0
 huggingface-hub==0.24.5
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
 idna==3.7
 ipykernel==6.29.5
 ipython==8.26.0
