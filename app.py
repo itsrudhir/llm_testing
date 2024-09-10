@@ -103,7 +103,7 @@ def recommend_hotels(df, max_price=None, amenities=None, standard=None, meal_pla
 
     if query:
         query_string = ' and '.join(query)
-        st.write(f"Generated Query String: {query_string}")  # Debugging line
+        #st.write(f"Generated Query String: {query_string}")  # Debugging line
         try:
             result_df = df.query(query_string)
         except Exception as e:
