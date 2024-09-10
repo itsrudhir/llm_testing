@@ -1,23 +1,24 @@
-
-
-
-
-
-
-
 import spacy
 import pandas as pd
 import re
 import streamlit as st
 
 # Load Spacy model
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    # Download the model if it's not installed
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+# try:
+#     nlp = spacy.load("en_core_web_sm")
+# except OSError:
+#     # Download the model if it's not installed
+#     from spacy.cli import download
+#     download("en_core_web_sm")
+#     nlp = spacy.load("en_core_web_sm")
+
+model_name = "en_core_web_sm"
+
+if not spacy.util.is_package(model_name):
+    st.write(f"Model '{model_name}' not found. Downloading...")
+    download(model_name)
+    
+nlp = spacy.load(model_name)
 
 # Load the dataset
 df = pd.read_csv("synthetic_hotels_dataset_japan.csv")
